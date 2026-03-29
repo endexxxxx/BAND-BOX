@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Band BOX</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+  <style>
+    /* Reset & 기본 설정 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* 헤더 */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #000;
+      border-bottom: 2px solid #ff007f;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff007f;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      margin: 0 1rem;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ff0000;
+    }
+
+    /* 홈 배너 */
+    .home {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 5rem; /* 헤더 고정 대비 */
+    }
+
+    .home::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('banner.jpg') no-repeat center center/cover;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ff007f;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    /* 멤버 섹션 */
+    .members {
+      padding: 2rem;
+      background: #111;
+      text-align: center;
+    }
+
+    .members h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #ff0000;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+
+    .member-card {
+      display: inline-block;
+      margin: 1rem;
+      padding: 1rem;
+      width: 300px;
+      background: #000;
+      border: 2px solid #ff007f;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
+    }
+
+    .member-card img {
+      width: 80%;
+      border-radius: 30%;
+      margin-bottom: 1rem;
+    }
+
+    .member-card h3 {
+      color: #ff007f;
+      margin-bottom: 0.5rem;
+    }
+
+    .member-card p {
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    /* 푸터 */
+    .footer {
+      padding: 1rem 2rem;
+      text-align: center;
+      background: #000;
+      border-top: 2px solid #ff007f;
+    }
+
+    .footer p {
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#members">Members</a>
+      <a href="#tour">Tour</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home" class="home">
+    <div class="banner">
+      <h1>We are BOX</h1>
+      <p>새 시대의 등장.</p>
+    </div>
+  </main>
+
+  <section id="members" class="members">
+    <h2>Meet Our Members</h2>
+    <div class="member-card">
+      <img src="member1.jpg" alt="Member 1">
+      <h3>배 정 한</h3>
+      <p> 베이시스트 </p>
+      <p>"ㅈㅁㅊ 남자친구"</p>
+    </div>
+    <div class="member-card">
+      <img src="member2.jpg" alt="Member 2">
+      <h3>곽 도 훈</h3>
+      <p> 보컬 </p>
+      <p>"인생을 노래한다."</p>
+    </div>
+    <div class="member-card">
+      <img src="member5.jpg" alt="Member 5">
+      <h3>차 서 후</h3>
+      <p>  기타리스트, 리더  </p>
+      <p>"인일기백"</p>
+    </div>
+    <div class="member-card">
+      <img src="member3.jpg" alt="Member">
+      <h3>지 현 준</h3>
+      <p>  키보디스트  </p>
+      <p>"청석고 축구짱"</p>
+    </div>
+    <div class="member-card">
+      <img src="member4.jpg" alt="Member 2">
+      <h3>송 승 원</h3>
+      <p>  드러머  </p>
+      <p>"드러머 꿈나무"</p>
+    </div>
+    
+    <!-- 추가 멤버 삽입 가능 -->
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 BOX. All rights reserved.</p>
+  </footer>
+</body>
+</html>
